@@ -59,12 +59,12 @@ export function ProfilePage() {
 
   return (
     <BookingLayout profile={profile}>
-      <main className="pb-16 pt-6">
+      <main className="mx-auto flex h-full w-full max-w-4xl flex-1 flex-col items-center justify-between overflow-hidden px-4 py-2 sm:px-6">
         <HeroSection profile={profile} />
         <InfoSection items={profile.bio} />
 
         <section
-          className="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 px-5 pt-10 sm:px-8 lg:px-10"
+          className="mx-auto flex w-full shrink-0 flex-col items-center justify-center gap-[clamp(0.25rem,1dvh,0.75rem)] overflow-hidden py-1 sm:min-h-0 sm:flex-row sm:gap-4"
           aria-label="Available meetings"
         >
           {profile.meetings.map((meeting) => (

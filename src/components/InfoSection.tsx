@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import type { InfoItem } from '../data/profileTypes'
-import { iconMap } from './iconMap'
+
 
 type InfoSectionProps = {
   items: InfoItem[]
@@ -27,13 +27,13 @@ export function InfoSection({ items }: InfoSectionProps) {
 
   return (
     <motion.section
-      className="mx-auto w-full max-w-3xl px-5 pt-8 text-center sm:px-8 sm:pt-10 lg:px-10"
+      className="mx-auto w-full max-w-3xl shrink-0 px-4 pt-[clamp(0.25rem,1dvh,1rem)] text-center"
       variants={listVariants}
       initial={prefersReducedMotion ? false : 'hidden'}
       animate="visible"
       aria-label="Profile details"
     >
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-[clamp(0.25rem,1dvh,0.5rem)]">
         {items.map((item) => (
           <motion.article
             key={item.text}
@@ -41,7 +41,7 @@ export function InfoSection({ items }: InfoSectionProps) {
             variants={rowVariants}
             transition={{ duration: prefersReducedMotion ? 0 : 0.45, ease: 'easeOut' }}
           >
-            <p className="text-sm font-medium leading-relaxed tracking-normal text-neutral-800 md:text-[15px] md:leading-relaxed">
+            <p className="text-[clamp(0.75rem,2dvh,0.9375rem)] font-medium leading-relaxed tracking-normal text-neutral-800">
               {item.text}
             </p>
           </motion.article>

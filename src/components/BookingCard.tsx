@@ -16,45 +16,46 @@ export function BookingCard({ meeting, profileSlug }: BookingCardProps) {
 
   return (
     <motion.article
-      className="group rounded-2xl border border-neutral-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md sm:p-8"
+      className="group flex w-full shrink-0 flex-row items-center justify-between rounded-xl border border-neutral-100 bg-white p-[clamp(0.75rem,2dvh,1.25rem)] shadow-sm transition-shadow hover:shadow-md sm:flex-1"
       initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
     >
-      <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
-          <div className="flex size-16 shrink-0 items-center justify-center rounded-full bg-[#f2efff] text-[#201944] sm:size-20">
-            <Icon className="size-8 stroke-[1.8] sm:size-10" aria-hidden="true" />
-          </div>
-
-          <div className="min-w-0 text-left">
-            <h2 className="text-xl font-bold leading-tight tracking-tight text-[#16122d] sm:text-2xl">
-              {meeting.title}
-            </h2>
-            <div className="mt-2 flex items-center gap-2 text-sm font-semibold text-neutral-600 sm:text-[15px]">
-              <Clock className="size-4 text-[#201944]" aria-hidden="true" />
-              <span>{meeting.duration}</span>
-            </div>
-            <p className="mt-2 max-w-xl text-sm font-normal leading-relaxed tracking-normal text-neutral-600 sm:text-[15px]">
-              {meeting.description}
-            </p>
-          </div>
+      <div className="flex min-w-0 flex-row items-center gap-[clamp(0.75rem,2dvh,1.25rem)]">
+        <div className="flex size-[clamp(2.5rem,6dvh,3.5rem)] shrink-0 items-center justify-center rounded-full bg-[#f2efff] text-[#201944]">
+          <Icon className="size-[clamp(1.25rem,3dvh,1.5rem)] stroke-[1.8]" aria-hidden="true" />
         </div>
 
-        <motion.a
-          href={bookingUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex w-full items-center justify-center gap-3 rounded-lg bg-[#201944] px-6 py-3.5 text-[15px] font-semibold tracking-normal text-white shadow-sm transition-all hover:bg-[#16122d] hover:shadow-md active:shadow-sm sm:w-auto sm:min-w-48"
-          whileHover={prefersReducedMotion ? undefined : { scale: 1.02 }}
-          whileTap={prefersReducedMotion ? undefined : { scale: 0.98 }}
-          aria-label={`${meeting.cta} with ${meeting.title}`}
-        >
-          <span>{meeting.cta}</span>
-          <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-        </motion.a>
+        <div className="min-w-0 text-left">
+          <h2 className="truncate text-[clamp(1rem,2.5dvh,1.125rem)] font-bold tracking-tight text-[#16122d]">
+            {meeting.title}
+          </h2>
+          <div className="mt-1 flex items-center gap-1.5 text-[clamp(0.75rem,1.5dvh,0.875rem)] font-semibold text-neutral-600">
+            <Clock className="size-3.5 text-[#201944]" aria-hidden="true" />
+            <span>{meeting.duration}</span>
+          </div>
+          {/* Show description only on medium screens and up to save vertical space on mobile */}
+          <p className="mt-1 hidden md:block line-clamp-1 text-[clamp(0.75rem,1.5dvh,0.875rem)] font-normal text-neutral-600">
+            {meeting.description}
+          </p>
+        </div>
       </div>
+
+      <motion.a
+        href={bookingUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="ml-3 flex shrink-0 items-center justify-center rounded-lg bg-[#201944] p-[clamp(0.5rem,1.5dvh,0.75rem)] text-white shadow-sm transition-all hover:bg-[#16122d] md:px-[clamp(1rem,2dvh,1.5rem)] md:py-[clamp(0.5rem,1.5dvh,0.75rem)]"
+        whileHover={prefersReducedMotion ? undefined : { scale: 1.05 }}
+        whileTap={prefersReducedMotion ? undefined : { scale: 0.95 }}
+        aria-label={`${meeting.cta} with ${meeting.title}`}
+      >
+        <span className="mr-2 hidden tracking-normal md:inline md:text-[clamp(0.75rem,1.5dvh,0.875rem)] md:font-semibold">
+          {meeting.cta}
+        </span>
+        <ArrowRight className="size-4 md:size-[clamp(0.75rem,1.5dvh,0.875rem)]" aria-hidden="true" />
+      </motion.a>
     </motion.article>
   )
 }
