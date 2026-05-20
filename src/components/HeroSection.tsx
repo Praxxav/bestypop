@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { MdCheckroom, MdLocationOn } from 'react-icons/md'
+import {  MdLocationOn } from 'react-icons/md'
 import type { Profile } from '../data/profileTypes'
 
 type HeroSectionProps = {
@@ -27,10 +27,10 @@ export function HeroSection({ profile }: HeroSectionProps) {
           />
         </div>
 
-        <div className="mt-1.5 sm:mt-2 inline-flex items-center gap-1.5 rounded-full bg-white/70 px-2 py-0.5 text-[9px] font-semibold text-[#6b46c1] shadow-sm backdrop-blur-md sm:text-[10px] border border-white/50">
+        {/* <div className="mt-1.5 sm:mt-2 inline-flex items-center gap-1.5 rounded-full bg-white/70 px-2 py-0.5 text-[9px] font-semibold text-[#6b46c1] shadow-sm backdrop-blur-md sm:text-[10px] border border-white/50">
           <MdCheckroom className="size-3 sm:size-3.5" />
           <span>Custom Apparel • POD • Bulk Manufacturing</span>
-        </div>
+        </div> */}
 
         <h1 className="mt-1.5 sm:mt-2 max-w-5xl text-base font-bold tracking-tight text-[#15112e] sm:text-lg">
           {profile.name}
@@ -47,7 +47,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
           </div>
         )}
 
-        <div className="mt-1 h-[1px] w-10 rounded-full bg-gradient-to-r from-transparent via-[#6b46c1] to-transparent sm:mt-1.5" aria-hidden="true" />
+        <div className="mt-1 h-1px w-10 rounded-full bg-linear-to-r from-transparent via-[#6b46c1] to-transparent sm:mt-1.5" aria-hidden="true" />
       </motion.div>
     </section>
   )
