@@ -35,8 +35,8 @@ export function BookingCard({ meeting, profileSlug }: BookingCardProps) {
             <Clock className="size-3.5 text-[#201944]" aria-hidden="true" />
             <span>{meeting.duration}</span>
           </div>
-          {/* Show description only on medium screens and up to save vertical space on mobile */}
-          <p className="mt-1 hidden md:block line-clamp-1 text-[clamp(0.75rem,1.5dvh,0.875rem)] font-normal text-neutral-600">
+          {/* Show description on all screens */}
+          <p className="mt-1 line-clamp-1 text-[clamp(0.75rem,1.5dvh,0.875rem)] font-normal text-neutral-600">
             {meeting.description}
           </p>
         </div>

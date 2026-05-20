@@ -27,7 +27,7 @@ export function InfoSection({ items }: InfoSectionProps) {
 
   return (
     <motion.section
-      className="mx-auto w-full max-w-3xl shrink-0 px-2 py-1 text-center text-sm sm:px-4 sm:py-2"
+      className="mx-auto w-full max-w-3xl shrink-0 px-2 py-2 text-center text-sm sm:px-3"
       variants={listVariants}
       initial={prefersReducedMotion ? false : 'hidden'}
       animate="visible"
@@ -41,7 +41,7 @@ export function InfoSection({ items }: InfoSectionProps) {
             variants={rowVariants}
             transition={{ duration: prefersReducedMotion ? 0 : 0.45, ease: 'easeOut' }}
           >
-            <p className="text-xs font-medium leading-snug tracking-normal text-neutral-800 sm:text-sm sm:leading-relaxed">
+            <p className="text-[0.75rem] font-medium leading-relaxed tracking-normal text-neutral-800 sm:text-[0.85rem]">
               {item.text}
             </p>
           </motion.article>

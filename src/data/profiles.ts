@@ -25,7 +25,7 @@ export const profiles: Profile[] = [
         slug: 'quick-connect',
         title: 'Quick Connect',
         duration: '15 min',
-        description: 'Ideal for introductions, partnership inquiries, and general business discussions.',
+        description: 'Lets Discuss your Apparel needs and how we can help',
         cta: 'Schedule Meeting',
         icon: 'users',
       },
