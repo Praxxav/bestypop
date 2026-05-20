@@ -35,13 +35,13 @@ export function HeroSection({ profile }: HeroSectionProps) {
         <h1 className="mt-1.5 sm:mt-2 max-w-5xl text-base font-bold tracking-tight text-[#15112e] sm:text-lg">
           {profile.name}
         </h1>
-        <p className="mt-0.5 text-[0.75rem] font-medium tracking-wide text-[#5c50c6] sm:text-[0.85rem]">
+        <p className="mt-0.5 text-[1.5rem] font-medium tracking-wide text-[#5c50c6] sm:text-[0.95rem]">
           {profile.role.split('BestyPop™')[0]}
           <span className="font-semibold">BestyPop™</span>
         </p>
 
         {profile.location && (
-          <div className="mt-1 flex items-center justify-center gap-1.5 text-[9px] font-medium text-neutral-500 sm:text-[10px]">
+          <div className="mt-1 flex items-center justify-center gap-1.5 text-[9px] font-medium text-neutral-500 sm:text-[14px]">
             <MdLocationOn className="size-3.5 text-[#6b46c1] sm:size-4" />
             <span>{profile.location}</span>
           </div>
