@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  my-react-app:
+    build: .
+    container_name: Profiles-React-App
+    restart: unless-stopped
+    ports:
+      - "3002:80"
