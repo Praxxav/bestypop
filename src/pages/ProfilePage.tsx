@@ -61,7 +61,7 @@ export function ProfilePage() {
 
   return (
     <BookingLayout profile={profile}>
-      <main className="mx-auto flex h-full w-full max-w-4xl flex-1 flex-col items-center overflow-y-auto px-2 py-1.5 sm:px-3 sm:py-2">
+      <main className="mx-auto flex h-full w-full max-w-4xl flex-1 flex-col items-center overflow-y-auto px-2 py-0.5 sm:px-3 sm:py-1">
         {/* Hero Section */}
         <div className="w-full shrink-0">
           <HeroSection profile={profile} />
@@ -74,33 +74,33 @@ export function ProfilePage() {
 
         {/* Stats Section */}
         <section className="w-full shrink-0">
-          <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-4 sm:gap-2">
-            <div className="flex flex-col items-center gap-1.5 rounded-lg bg-white/60 p-2.5 text-center backdrop-blur-sm">
-              <MdCheckroom className="size-5 text-purple-600" />
-              <p className="text-[0.75rem] font-bold text-neutral-900">30+</p>
-              <p className="text-[0.6rem] text-neutral-600">Apparel Styles</p>
+          <div className="grid grid-cols-2 gap-1 sm:grid-cols-4 sm:gap-1.5">
+            <div className="flex flex-col items-center gap-1 rounded-lg bg-white/60 p-1.5 text-center backdrop-blur-sm">
+              <MdCheckroom className="size-4 text-purple-600 sm:size-5" />
+              <p className="text-[0.7rem] font-bold text-neutral-900 sm:text-[0.75rem]">30+</p>
+              <p className="text-[0.55rem] text-neutral-600 sm:text-[0.6rem]">Apparel Styles</p>
             </div>
-            <div className="flex flex-col items-center gap-1.5 rounded-lg bg-white/60 p-2.5 text-center backdrop-blur-sm">
-              <MdFactory className="size-5 text-purple-600" />
-              <p className="text-[0.75rem] font-bold text-neutral-900">Tiruppur</p>
-              <p className="text-[0.6rem] text-neutral-600">Manufacturing</p>
+            <div className="flex flex-col items-center gap-1 rounded-lg bg-white/60 p-1.5 text-center backdrop-blur-sm">
+              <MdFactory className="size-4 text-purple-600 sm:size-5" />
+              <p className="text-[0.7rem] font-bold text-neutral-900 sm:text-[0.75rem]">Tiruppur</p>
+              <p className="text-[0.55rem] text-neutral-600 sm:text-[0.6rem]">Manufacturing</p>
             </div>
-            <div className="flex flex-col items-center gap-1.5 rounded-lg bg-white/60 p-2.5 text-center backdrop-blur-sm">
-              <MdInventory2 className="size-5 text-purple-600" />
-              <p className="text-[0.75rem] font-bold text-neutral-900">POD ,Bulk & Single Piece Customization</p>
-              <p className="text-[0.6rem] text-neutral-600">Production</p>
+            <div className="flex flex-col items-center gap-1 rounded-lg bg-white/60 p-1.5 text-center backdrop-blur-sm">
+              <MdInventory2 className="size-4 text-purple-600 sm:size-5" />
+              <p className="text-[0.7rem] font-bold text-neutral-900 sm:text-[0.75rem]">POD ,Bulk & Single Piece Customization</p>
+              <p className="text-[0.55rem] text-neutral-600 sm:text-[0.6rem]">Production</p>
             </div>
-            <div className="flex flex-col items-center gap-1.5 rounded-lg bg-white/60 p-2.5 text-center backdrop-blur-sm">
-              <MdPeople className="size-5 text-purple-600" />
-              <p className="text-[0.75rem] font-bold text-neutral-900">100+</p>
-              <p className="text-[0.6rem] text-neutral-600">Brands & Creators</p>
+            <div className="flex flex-col items-center gap-1 rounded-lg bg-white/60 p-1.5 text-center backdrop-blur-sm">
+              <MdPeople className="size-4 text-purple-600 sm:size-5" />
+              <p className="text-[0.7rem] font-bold text-neutral-900 sm:text-[0.75rem]">100+</p>
+              <p className="text-[0.55rem] text-neutral-600 sm:text-[0.6rem]">Brands & Creators</p>
             </div>
           </div>
         </section>
 
         {/* Booking Cards */}
         <section
-          className="mt-1 sm:mt-1.5 w-full shrink-0 flex flex-col items-center justify-center gap-1.5"
+          className="mt-0.5 sm:mt-1 w-full shrink-0 flex flex-col items-center justify-center gap-1"
           aria-label="Available meetings"
         >
           {profile.meetings.map((meeting) => (
@@ -109,8 +109,8 @@ export function ProfilePage() {
         </section>
 
         {/* Footer */}
-        <footer className="w-full shrink-0 border-t border-neutral-200 px-2 pt-1.5 pb-6 sm:px-3 sm:py-2">
-          <div className="flex flex-wrap items-center justify-center gap-2.5 text-[0.65rem] font-medium text-neutral-600 sm:gap-3.5 sm:text-[0.7rem]">
+        <footer className="w-full shrink-0 border-t border-neutral-200 px-2 py-1 sm:px-3 sm:py-1.5">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-[0.65rem] font-medium text-neutral-600 sm:gap-3 sm:text-[0.7rem]">
             <a
               href={profile.socials.linkedinUrl}
               target="_blank"

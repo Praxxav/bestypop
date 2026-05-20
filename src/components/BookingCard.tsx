@@ -16,7 +16,7 @@ export function BookingCard({ meeting, profileSlug }: BookingCardProps) {
 
   return (
     <motion.article
-      className="group flex w-full shrink-0 flex-row items-center justify-between rounded-xl border border-neutral-100 bg-white p-[clamp(0.75rem,2dvh,1.25rem)] shadow-sm transition-shadow hover:shadow-md sm:flex-1"
+      className="group flex w-full shrink-0 flex-row items-center justify-between rounded-xl border border-neutral-100 bg-white p-[clamp(0.5rem,1.5dvh,1rem)] shadow-sm transition-shadow hover:shadow-md sm:flex-1"
       initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
