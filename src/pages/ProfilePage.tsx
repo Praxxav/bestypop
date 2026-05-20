@@ -61,7 +61,7 @@ export function ProfilePage() {
 
   return (
     <BookingLayout profile={profile}>
-      <main className="mx-auto flex h-full w-full max-w-4xl flex-1 flex-col items-center overflow-y-auto px-2 py-0.5 sm:px-3 sm:py-1">
+      <main className="mx-auto flex h-full w-full max-w-4xl flex-1 flex-col items-center overflow-hidden px-2 py-0.5 sm:px-3 sm:py-1">
         {/* Hero Section */}
         <div className="w-full shrink-0">
           <HeroSection profile={profile} />
@@ -73,7 +73,7 @@ export function ProfilePage() {
         </div>
 
         {/* Stats Section */}
-        <section className="w-full shrink-0">
+        <section className="w-full shrink-0 mt-4 sm:mt-4">
           <div className="grid grid-cols-2 gap-1 sm:grid-cols-4 sm:gap-1.5">
             <div className="flex flex-col items-center gap-1 rounded-lg bg-white/60 p-1.5 text-center backdrop-blur-sm">
               <MdCheckroom className="size-4 text-purple-600 sm:size-5" />
