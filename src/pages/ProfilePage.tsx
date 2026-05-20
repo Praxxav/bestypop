@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router'
 import { MdCheckroom, MdFactory, MdInventory2, MdPeople } from 'react-icons/md'
 import {  FiGlobe, FiMail } from 'react-icons/fi'
-import { FaWhatsapp, FaHeart } from 'react-icons/fa'
+import { FaWhatsapp, FaHeart, FaInstagram } from 'react-icons/fa'
 import { BookingCard } from '../components/BookingCard'
 import { HeroSection } from '../components/HeroSection'
 import { InfoSection } from '../components/InfoSection'
@@ -147,6 +147,16 @@ export function ProfilePage() {
             >
               <FiMail className="size-3.5 sm:size-4 text-[#6b46c1]" />
               <span>Email</span>
+            </a>
+            <span className="text-neutral-300">|</span>
+            <a
+              href="https://www.instagram.com/bestypop.in"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 transition-colors hover:text-neutral-900"
+            >
+              <FaInstagram className="size-3.5 sm:size-4 text-[#e1306c]" />
+              <span>Instagram</span>
             </a>
           </div>
           
