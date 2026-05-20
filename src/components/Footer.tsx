@@ -9,7 +9,7 @@ export function Footer({ socials }: FooterProps) {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="mt-[clamp(0.25rem,1dvh,0.75rem)] shrink-0 bg-neutral-50 px-4 py-[clamp(0.25rem,1dvh,1rem)]">
+    <footer className="mt-[clamp(0.25rem,1dvh,0.75rem)] shrink-0 bg-neutral-50 px-4 pt-[clamp(0.25rem,1dvh,1rem)] pb-[clamp(1.5rem,4dvh,2rem)]">
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-[clamp(0.25rem,1dvh,0.75rem)]">
         <div className="flex w-full flex-row flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[clamp(0.7rem,1.5dvh,0.875rem)] font-medium text-neutral-600 sm:gap-10">
           <a
