@@ -46,7 +46,7 @@ export const profiles: Profile[] = [
       websiteLabel: 'bestypop.com',
       websiteUrl: 'https://bestypop.com',
       email: 'jineesh.mathew@bestypop.com',
-      whatsapp: '+91 8848483304',
+      whatsapp: '918848483304',
     },
   },
   {
