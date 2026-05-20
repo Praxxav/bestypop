@@ -14,7 +14,7 @@ export const profiles: Profile[] = [
     bio: [
       {
         icon: 'shirt',
-        text: 'BestyPop™ is a Tiruppur-based apparel manufacturing and customization company supporting brands, creators, and businesses through scalable knitwear production and merchandise solutions.',
+        text: 'BestyPop™ is an apparel manufacturing and customization company with operations in Atlanta, USA, and production facilities in Tiruppur, India, supporting brands, creators, and businesses through scalable knitwear production and merchandise solutions.',
       },
       {
         icon: 'users',
