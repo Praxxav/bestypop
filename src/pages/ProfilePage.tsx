@@ -61,7 +61,7 @@ export function ProfilePage() {
 
   return (
     <BookingLayout profile={profile}>
-      <main className="mx-auto flex h-full w-full max-w-4xl flex-1 flex-col items-center overflow-hidden px-2 py-1.5 sm:px-3 sm:py-2">
+      <main className="mx-auto flex h-full w-full max-w-4xl flex-1 flex-col items-center overflow-y-auto px-2 py-1.5 sm:px-3 sm:py-2">
         {/* Hero Section */}
         <div className="w-full shrink-0">
           <HeroSection profile={profile} />
