@@ -109,7 +109,7 @@ export function ProfilePage() {
         </section>
 
         {/* Footer */}
-        <footer className="w-full shrink-0 pb-4 pt-2 px-2 sm:px-3 sm:pb-6 mt-1">
+        <footer className="w-full shrink-0 pb-6 pt-1 px-2 sm:px-3 sm:pb-8 mt-1">
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[0.7rem] sm:text-xs font-medium text-neutral-600">
             <a
               href={profile.socials.linkedinUrl}

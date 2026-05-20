@@ -27,7 +27,7 @@ export function InfoSection({ items }: InfoSectionProps) {
 
   return (
     <motion.section
-      className="mx-auto w-full max-w-3xl shrink-0 px-2 py-2 text-center text-sm sm:px-3"
+      className="mx-auto w-full max-w-3xl shrink-0 px-2 text-center text-sm sm:px-3"
       variants={listVariants}
       initial={prefersReducedMotion ? false : 'hidden'}
       animate="visible"
