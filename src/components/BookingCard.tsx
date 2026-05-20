@@ -51,7 +51,7 @@ export function BookingCard({ meeting, profileSlug }: BookingCardProps) {
         whileTap={prefersReducedMotion ? undefined : { scale: 0.95 }}
         aria-label={`${meeting.cta} with ${meeting.title}`}
       >
-        <span className="mr-2 hidden tracking-normal md:inline md:text-[clamp(0.75rem,1.5dvh,0.875rem)] md:font-semibold">
+        <span className="mr-1.5 text-[10px] font-medium tracking-normal sm:mr-2 sm:text-xs md:text-[clamp(0.75rem,1.5dvh,0.875rem)] md:font-semibold">
           {meeting.cta}
         </span>
         <ArrowRight className="size-4 md:size-[clamp(0.75rem,1.5dvh,0.875rem)]" aria-hidden="true" />

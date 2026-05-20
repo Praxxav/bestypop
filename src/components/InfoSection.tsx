@@ -41,7 +41,7 @@ export function InfoSection({ items }: InfoSectionProps) {
             variants={rowVariants}
             transition={{ duration: prefersReducedMotion ? 0 : 0.45, ease: 'easeOut' }}
           >
-            <p className="text-[0.75rem] font-medium leading-relaxed tracking-normal text-neutral-800 sm:text-[0.85rem]">
+            <p className="text-[0.8rem] font-medium leading-relaxed tracking-normal text-neutral-800 sm:text-[0.9rem]">
               {item.text}
             </p>
           </motion.article>
