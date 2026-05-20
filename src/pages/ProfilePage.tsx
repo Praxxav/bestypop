@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router'
 import { MdCheckroom, MdFactory, MdInventory2, MdPeople } from 'react-icons/md'
 import {  FiGlobe, FiMail } from 'react-icons/fi'
-import { FaWhatsapp, FaHeart, FaInstagram } from 'react-icons/fa'
+import { FaWhatsapp, FaHeart, FaInstagram, FaYoutube } from 'react-icons/fa'
 import { BookingCard } from '../components/BookingCard'
 import { HeroSection } from '../components/HeroSection'
 import { InfoSection } from '../components/InfoSection'
@@ -87,8 +87,8 @@ export function ProfilePage() {
             </div>
             <div className="flex flex-col items-center gap-1 rounded-lg bg-white/60 p-1.5 text-center backdrop-blur-sm">
               <MdInventory2 className="size-4 text-purple-600 sm:size-5" />
-              <p className="text-[0.7rem] font-bold text-neutral-900 sm:text-[0.75rem]">POD,Bulk & Single Piece Customization</p>
-              <p className="text-[0.55rem] text-neutral-600 sm:text-[0.6rem]">Production</p>
+              <p className="text-[0.7rem] font-bold text-neutral-900 sm:text-[0.75rem]">POD,Bulk & Single Piece Customization and Production</p>
+              {/* <p className="text-[0.55rem] text-neutral-600 sm:text-[0.6rem]">Production</p> */}
             </div>
             <div className="flex flex-col items-center gap-1 rounded-lg bg-white/60 p-1.5 text-center backdrop-blur-sm">
               <MdPeople className="size-4 text-purple-600 sm:size-5" />
@@ -157,6 +157,16 @@ export function ProfilePage() {
             >
               <FaInstagram className="size-3.5 sm:size-4 text-[#e1306c]" />
               <span>Instagram</span>
+            </a>
+            <span className="text-neutral-300">|</span>
+            <a
+              href="https://youtube.com/@bestypop"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 transition-colors hover:text-neutral-900"
+            >
+              <FaYoutube className="size-3.5 sm:size-4 text-red-600" />
+              <span>YouTube</span>
             </a>
           </div>
           

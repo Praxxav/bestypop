@@ -32,10 +32,10 @@ export function HeroSection({ profile }: HeroSectionProps) {
           <span>Custom Apparel • POD • Bulk Manufacturing</span>
         </div> */}
 
-        <h1 className="mt-1.5 sm:mt-2 max-w-5xl text-base font-bold tracking-tight text-[#15112e] sm:text-lg">
+        <h1 className="mt-1.5 sm:mt-2 max-w-5xl text-[1.5rem] font-bold tracking-tight text-[#15112e] sm:text-[1.75rem]">
           {profile.name}
         </h1>
-        <p className="mt-0.5 text-[1.5rem] font-medium tracking-wide text-[#5c50c6] sm:text-[0.95rem]">
+        <p className="mt-0.5 text-[0.9rem] font-medium tracking-wide text-[#5c50c6] sm:text-[0.95rem]">
           {profile.role.split('BestyPop™')[0]}
           <span className="font-semibold">BestyPop™</span>
         </p>
