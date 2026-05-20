@@ -132,7 +132,7 @@ export function ProfilePage() {
             </a>
             <span className="text-neutral-300">|</span>
             <a
-              href={`https://wa.me/918848483304`}
+              href={`https://wa.me/${profile.socials.whatsapp}`}
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-1.5 transition-colors hover:text-neutral-900"
