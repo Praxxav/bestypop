@@ -8,7 +8,7 @@ export const profiles: Profile[] = [
   {
     slug: 'jineesh-mathew',
     name: 'Jineesh Mathew',
-    role: 'Co-Founder, BestyPop™',
+    role: 'Co-Founder, & Managing Partner, BestyPop™',
     image: jineeshImage,
     bio: [
       {
@@ -29,15 +29,15 @@ export const profiles: Profile[] = [
         cta: 'Schedule Meeting',
         icon: 'users',
       },
-      {
-        slug: 'strategic-discussion',
-        title: 'Strategic Discussion',
-        duration: '30 min',
-        description:
-          'For detailed discussions related to manufacturing partnerships, custom apparel programs, merchandise execution, and long-term collaboration opportunities.',
-        cta: 'Schedule Meeting',
-        icon: 'target',
-      },
+      // {
+      //   slug: 'strategic-discussion',
+      //   title: 'Strategic Discussion',
+      //   duration: '30 min',
+      //   description:
+      //     'For detailed discussions related to manufacturing partnerships, custom apparel programs, merchandise execution, and long-term collaboration opportunities.',
+      //   cta: 'Schedule Meeting',
+      //   icon: 'target',
+      // },
     ],
     socials: {
       linkedinLabel: 'linkedin.com/in/jineeshmathew',

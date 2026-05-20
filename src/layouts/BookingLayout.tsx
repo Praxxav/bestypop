@@ -10,7 +10,7 @@ export function BookingLayout({ children, profile }: BookingLayoutProps) {
   const meetingPath = profile ? `meet.bestypop.com/${profile.slug}` : 'meet.bestypop.com'
 
   return (
-    <div className="flex h-[100dvh] w-full flex-col overflow-hidden bg-neutral-50 font-sans text-neutral-900 antialiased">
+    <div className="flex h-dvh w-full flex-col overflow-hidden font-sans text-neutral-900 antialiased">
       <Navbar meetingPath={meetingPath} />
       <div className="flex w-full flex-1 flex-col overflow-hidden">
         {children}

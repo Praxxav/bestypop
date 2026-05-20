@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
 import { useParams } from 'react-router'
+import { MdCheckroom, MdFactory, MdInventory2, MdPeople } from 'react-icons/md'
+import { FiLinkedin, FiGlobe, FiMail } from 'react-icons/fi'
+import { FaWhatsapp } from 'react-icons/fa'
 import { BookingCard } from '../components/BookingCard'
-import { Footer } from '../components/Footer'
 import { HeroSection } from '../components/HeroSection'
 import { InfoSection } from '../components/InfoSection'
 import { getProfileBySlug } from '../data/profiles'
@@ -59,21 +61,95 @@ export function ProfilePage() {
 
   return (
     <BookingLayout profile={profile}>
-      <main className="mx-auto flex h-full w-full max-w-4xl flex-1 flex-col items-center justify-between overflow-hidden px-4 py-2 sm:px-6">
-        <HeroSection profile={profile} />
-        <InfoSection items={profile.bio} />
+      <main className="mx-auto flex h-full w-full max-w-4xl flex-1 flex-col items-center overflow-hidden px-3 py-3 sm:px-4 sm:py-4">
+        {/* Hero Section */}
+        <div className="w-full shrink-0">
+          <HeroSection profile={profile} />
+        </div>
 
-        <section
-          className="mx-auto flex w-full shrink-0 flex-col items-center justify-center gap-[clamp(0.25rem,1dvh,0.75rem)] overflow-hidden py-1 sm:min-h-0 sm:flex-row sm:gap-4"
-          aria-label="Available meetings"
-        >
-          {profile.meetings.map((meeting) => (
-            <BookingCard key={meeting.slug} meeting={meeting} profileSlug={profile.slug} />
-          ))}
-        </section>
+        {/* Info Section */}
+        <div className="w-full shrink-0 overflow-y-auto flex-1">
+          <InfoSection items={profile.bio} />
+
+          {/* Stats Section - Compact */}
+          <section className="my-3 w-full">
+            <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
+              <div className="flex flex-col items-center gap-2 rounded-lg bg-white/50 p-3 text-center backdrop-blur-sm">
+                <MdCheckroom className="size-6 text-purple-600" />
+                <p className="text-sm font-bold text-neutral-900">100+</p>
+                <p className="text-xs text-neutral-600">Apparel</p>
+              </div>
+              <div className="flex flex-col items-center gap-2 rounded-lg bg-white/50 p-3 text-center backdrop-blur-sm">
+                <MdFactory className="size-6 text-purple-600" />
+                <p className="text-sm font-bold text-neutral-900">Tiruppur</p>
+                <p className="text-xs text-neutral-600">Manufacturing</p>
+              </div>
+              <div className="flex flex-col items-center gap-2 rounded-lg bg-white/50 p-3 text-center backdrop-blur-sm">
+                <MdInventory2 className="size-6 text-purple-600" />
+                <p className="text-sm font-bold text-neutral-900">POD & Bulk</p>
+                <p className="text-xs text-neutral-600">Production</p>
+              </div>
+              <div className="flex flex-col items-center gap-2 rounded-lg bg-white/50 p-3 text-center backdrop-blur-sm">
+                <MdPeople className="size-6 text-purple-600" />
+                <p className="text-sm font-bold text-neutral-900">500+</p>
+                <p className="text-xs text-neutral-600">Brands & Creators</p>
+              </div>
+            </div>
+          </section>
+
+
+          {/* Booking Cards - Compact */}
+          <section
+            className="my-2 w-full flex shrink-0 flex-col items-center justify-center gap-2"
+            aria-label="Available meetings"
+          >
+            {profile.meetings.map((meeting) => (
+              <BookingCard key={meeting.slug} meeting={meeting} profileSlug={profile.slug} />
+            ))}
+          </section>
+
+          {/* Footer - Compact */}
+          <footer className="mt-2 w-full shrink-0 border-t border-neutral-200 px-2 py-2">
+            <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-medium text-neutral-600">
+              <a
+                href={profile.socials.linkedinUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1 transition-colors hover:text-neutral-900"
+              >
+                <FiLinkedin className="size-4" />
+                <span className="hidden sm:inline">LinkedIn</span>
+              </a>
+              <a
+                href={profile.socials.websiteUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1 transition-colors hover:text-neutral-900"
+              >
+                <FiGlobe className="size-4" />
+                <span className="hidden sm:inline">Website</span>
+              </a>
+              <a
+                href={`https://wa.me/919999999999`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1 transition-colors hover:text-neutral-900"
+              >
+                <FaWhatsapp className="size-4 text-green-500" />
+                <span className="hidden sm:inline">WhatsApp</span>
+              </a>
+              <a
+                href={`mailto:${profile.socials.email}`}
+                className="flex items-center gap-1 transition-colors hover:text-neutral-900"
+              >
+                <FiMail className="size-4" />
+                <span className="hidden sm:inline">Email</span>
+              </a>
+            </div>
+            <p className="mt-2 text-center text-xs text-neutral-500">© 2026 BestyPop™. All rights reserved.</p>
+          </footer>
+        </div>
       </main>
-
-      <Footer socials={profile.socials} />
     </BookingLayout>
   )
 }

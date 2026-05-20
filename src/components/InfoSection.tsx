@@ -27,21 +27,21 @@ export function InfoSection({ items }: InfoSectionProps) {
 
   return (
     <motion.section
-      className="mx-auto w-full max-w-3xl shrink-0 px-4 pt-[clamp(0.25rem,1dvh,1rem)] text-center"
+      className="mx-auto w-full max-w-3xl shrink-0 px-2 py-1 text-center text-sm sm:px-4 sm:py-2"
       variants={listVariants}
       initial={prefersReducedMotion ? false : 'hidden'}
       animate="visible"
       aria-label="Profile details"
     >
-      <div className="flex flex-col items-center gap-[clamp(0.25rem,1dvh,0.5rem)]">
+      <div className="flex flex-col items-center gap-1">
         {items.map((item) => (
           <motion.article
             key={item.text}
-            className="w-full max-w-[40rem]"
+            className="w-full max-w-160"
             variants={rowVariants}
             transition={{ duration: prefersReducedMotion ? 0 : 0.45, ease: 'easeOut' }}
           >
-            <p className="text-[clamp(0.75rem,2dvh,0.9375rem)] font-medium leading-relaxed tracking-normal text-neutral-800">
+            <p className="text-xs font-medium leading-snug tracking-normal text-neutral-800 sm:text-sm sm:leading-relaxed">
               {item.text}
             </p>
           </motion.article>

@@ -3,10 +3,14 @@
 @layer base {
   html {
     @apply scroll-smooth;
+    background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 50%, #ffffff 100%);
+    min-height: 100vh;
   }
 
   body {
-    @apply bg-white antialiased;
+    @apply antialiased;
+    background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 50%, #ffffff 100%);
+    min-height: 100vh;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
