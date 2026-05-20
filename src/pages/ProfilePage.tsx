@@ -87,7 +87,7 @@ export function ProfilePage() {
             </div>
             <div className="flex flex-col items-center gap-1.5 rounded-lg bg-white/60 p-2.5 text-center backdrop-blur-sm">
               <MdInventory2 className="size-5 text-purple-600" />
-              <p className="text-[0.75rem] font-bold text-neutral-900">POD & Bulk & Single Piece Customization</p>
+              <p className="text-[0.75rem] font-bold text-neutral-900">POD ,Bulk & Single Piece Customization</p>
               <p className="text-[0.6rem] text-neutral-600">Production</p>
             </div>
             <div className="flex flex-col items-center gap-1.5 rounded-lg bg-white/60 p-2.5 text-center backdrop-blur-sm">
