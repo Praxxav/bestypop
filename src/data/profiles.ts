@@ -8,16 +8,16 @@ export const profiles: Profile[] = [
   {
     slug: 'jineesh-mathew',
     name: 'Jineesh Mathew',
-    role: 'Co-Founder, & Managing Partner, BestyPop™',
+    role: 'Co-Founder & Managing Partner, BestyPop™',
     image: jineeshImage,
     bio: [
       {
         icon: 'shirt',
-        text: 'BestyPop™ is a Tiruppur-based apparel manufacturing and customization company supporting brands, businesses, creators, and organizations through premium knitwear production and scalable merchandise solutions.',
+        text: 'BestyPop™ is a Tiruppur-based apparel manufacturing and customization company supporting brands, creators, and businesses through scalable knitwear production and merchandise solutions.',
       },
       {
         icon: 'users',
-        text: 'Serving startups, communities, creators, and businesses with customized apparel, on-demand manufacturing, and long-term production support.',
+        text: 'Specialized in POD, bulk apparel production, and custom merchandise execution.',
       },
     ],
     meetings: [
@@ -25,7 +25,7 @@ export const profiles: Profile[] = [
         slug: 'quick-connect',
         title: 'Quick Connect',
         duration: '15 min',
-        description: 'Lets Discuss your Apparel needs and how we can help',
+        description: 'Let’s discuss apparel manufacturing, customization, or partnership opportunities.',
         cta: 'Schedule Meeting',
         icon: 'users',
       },

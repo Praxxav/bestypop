@@ -100,7 +100,7 @@ export function ProfilePage() {
 
         {/* Booking Cards */}
         <section
-          className="mt-4 sm:mt-5 w-full shrink-0 flex flex-col items-center justify-center gap-1.5"
+          className="mt-1 sm:mt-1.5 w-full shrink-0 flex flex-col items-center justify-center gap-1.5"
           aria-label="Available meetings"
         >
           {profile.meetings.map((meeting) => (
