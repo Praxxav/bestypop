@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useParams } from 'react-router'
 import { MdCheckroom, MdFactory, MdInventory2, MdPeople } from 'react-icons/md'
 import { FiLinkedin, FiGlobe, FiMail } from 'react-icons/fi'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp, FaHeart } from 'react-icons/fa'
 import { BookingCard } from '../components/BookingCard'
 import { HeroSection } from '../components/HeroSection'
 import { InfoSection } from '../components/InfoSection'
@@ -61,7 +61,7 @@ export function ProfilePage() {
 
   return (
     <BookingLayout profile={profile}>
-      <main className="mx-auto flex h-full w-full max-w-4xl flex-1 flex-col items-center overflow-y-auto px-2 py-0.5 sm:px-3 sm:py-1">
+      <main className="mx-auto flex h-full w-full max-w-4xl flex-1 flex-col items-center overflow-y-auto px-2 py-0.5 sm:px-3 sm:py-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {/* Hero Section */}
         <div className="w-full shrink-0">
           <HeroSection profile={profile} />
@@ -109,44 +109,55 @@ export function ProfilePage() {
         </section>
 
         {/* Footer */}
-        <footer className="w-full shrink-0 border-t border-neutral-200 px-2 py-1 sm:px-3 sm:py-1.5">
-          <div className="flex flex-wrap items-center justify-center gap-2 text-[0.65rem] font-medium text-neutral-600 sm:gap-3 sm:text-[0.7rem]">
+        <footer className="w-full shrink-0 pb-4 pt-2 px-2 sm:px-3 sm:pb-6 mt-1">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[0.7rem] sm:text-xs font-medium text-neutral-600">
             <a
               href={profile.socials.linkedinUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex flex-col items-center gap-1 transition-colors hover:text-neutral-900"
+              className="flex items-center gap-1.5 transition-colors hover:text-neutral-900"
             >
-              <FiLinkedin className="size-4" />
+              <span className="flex size-[14px] sm:size-4 items-center justify-center rounded-sm bg-[#6b46c1] text-[8px] sm:text-[10px] font-bold text-white">in</span>
               <span>LinkedIn</span>
             </a>
+            <span className="text-neutral-300">|</span>
             <a
               href={profile.socials.websiteUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex flex-col items-center gap-1 transition-colors hover:text-neutral-900"
+              className="flex items-center gap-1.5 transition-colors hover:text-neutral-900"
             >
-              <FiGlobe className="size-4" />
+              <FiGlobe className="size-[14px] sm:size-4 text-[#6b46c1]" />
               <span>Website</span>
             </a>
+            <span className="text-neutral-300">|</span>
             <a
-              href={`https://wa.me/919999999999`}
+              href={`https://wa.me/${profile.socials.whatsapp}`}
               target="_blank"
               rel="noreferrer"
-              className="flex flex-col items-center gap-1 transition-colors hover:text-neutral-900"
+              className="flex items-center gap-1.5 transition-colors hover:text-neutral-900"
             >
-              <FaWhatsapp className="size-4 text-green-500" />
+              <FaWhatsapp className="size-[14px] sm:size-4 text-green-500" />
               <span>WhatsApp</span>
             </a>
+            <span className="text-neutral-300">|</span>
             <a
               href={`mailto:${profile.socials.email}`}
-              className="flex flex-col items-center gap-1 transition-colors hover:text-neutral-900"
+              className="flex items-center gap-1.5 transition-colors hover:text-neutral-900"
             >
-              <FiMail className="size-4" />
+              <FiMail className="size-[14px] sm:size-4 text-[#6b46c1]" />
               <span>Email</span>
             </a>
           </div>
-          <p className="mt-1 text-center text-[0.6rem] text-neutral-500 sm:text-[0.65rem]">© 2026 BestyPop™. All rights reserved.</p>
+          
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-[0.65rem] sm:text-xs text-neutral-500">
+            <div className="flex items-center gap-1.5 font-bold text-neutral-900">
+              <FaHeart className="text-[#6b46c1]" />
+              <span>BestyPop™</span>
+            </div>
+            <span className="text-neutral-300">|</span>
+            <span>Custom Apparel. Scalable Impact.</span>
+          </div>
         </footer>
       </main>
     </BookingLayout>

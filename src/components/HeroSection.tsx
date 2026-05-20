@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
+import { MdCheckroom, MdLocationOn } from 'react-icons/md'
 import type { Profile } from '../data/profileTypes'
 
 type HeroSectionProps = {
@@ -26,14 +27,27 @@ export function HeroSection({ profile }: HeroSectionProps) {
           />
         </div>
 
-        <h1 className="mt-2 max-w-5xl text-lg font-bold tracking-tight text-[#15112e] sm:text-xl">
+        <div className="mt-3 sm:mt-4 inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-1 text-[10px] font-semibold text-[#6b46c1] shadow-sm backdrop-blur-md sm:text-xs border border-white/50">
+          <MdCheckroom className="size-3 sm:size-3.5" />
+          <span>Custom Apparel • POD • Bulk Manufacturing</span>
+        </div>
+
+        <h1 className="mt-2 sm:mt-3 max-w-5xl text-lg font-bold tracking-tight text-[#15112e] sm:text-xl">
           {profile.name}
         </h1>
         <p className="mt-0.5 text-[0.75rem] font-medium tracking-wide text-[#5c50c6] sm:text-[0.85rem]">
           {profile.role.split('BestyPop™')[0]}
           <span className="font-semibold">BestyPop™</span>
         </p>
-        <div className="mt-1.5 h-0.5 w-10 rounded-full bg-[#5c50c6]" aria-hidden="true" />
+
+        {profile.location && (
+          <div className="mt-1.5 flex items-center justify-center gap-1.5 text-[10px] font-medium text-neutral-500 sm:text-xs">
+            <MdLocationOn className="size-3.5 text-[#6b46c1] sm:size-4" />
+            <span>{profile.location}</span>
+          </div>
+        )}
+
+        <div className="mt-2 h-[1px] w-12 rounded-full bg-gradient-to-r from-transparent via-[#6b46c1] to-transparent sm:mt-3 sm:w-16" aria-hidden="true" />
       </motion.div>
     </section>
   )

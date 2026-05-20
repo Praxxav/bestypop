@@ -31,12 +31,14 @@ export type SocialLinks = {
   websiteLabel: string
   websiteUrl: string
   email: string
+  whatsapp: string
 }
 
 export type Profile = {
   slug: string
   name: string
   role: string
+  location?: string
   image: string
   bio: InfoItem[]
   meetings: Meeting[]

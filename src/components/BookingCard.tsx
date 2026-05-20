@@ -46,7 +46,7 @@ export function BookingCard({ meeting, profileSlug }: BookingCardProps) {
         href={bookingUrl}
         target="_blank"
         rel="noreferrer"
-        className="ml-3 flex shrink-0 items-center justify-center rounded-lg bg-[#201944] p-[clamp(0.5rem,1.5dvh,0.75rem)] text-white shadow-sm transition-all hover:bg-[#16122d] md:px-[clamp(1rem,2dvh,1.5rem)] md:py-[clamp(0.5rem,1.5dvh,0.75rem)]"
+        className="ml-3 flex shrink-0 items-center justify-center rounded-lg bg-[#6b46c1] p-[clamp(0.5rem,1.5dvh,0.75rem)] text-white shadow-sm transition-all hover:bg-[#553c9a] md:px-[clamp(1rem,2dvh,1.5rem)] md:py-[clamp(0.5rem,1.5dvh,0.75rem)]"
         whileHover={prefersReducedMotion ? undefined : { scale: 1.05 }}
         whileTap={prefersReducedMotion ? undefined : { scale: 0.95 }}
         aria-label={`${meeting.cta} with ${meeting.title}`}

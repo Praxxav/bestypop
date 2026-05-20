@@ -9,6 +9,7 @@ export const profiles: Profile[] = [
     slug: 'jineesh-mathew',
     name: 'Jineesh Mathew',
     role: 'Co-Founder & Managing Partner, BestyPop™',
+    location: 'Atlanta, USA • Tiruppur, India',
     image: jineeshImage,
     bio: [
       {
@@ -45,12 +46,14 @@ export const profiles: Profile[] = [
       websiteLabel: 'bestypop.com',
       websiteUrl: 'https://bestypop.com',
       email: 'jineesh.mathew@bestypop.com',
+      whatsapp: '+91 8848483304',
     },
   },
   {
     slug: 'rathipriya-d',
     name: 'Rathipriya D',
     role: 'Graphic Designer, BestyPop™',
+    location: 'Tiruppur, India',
     image: rathipriyaImage,
     bio: [
       {
@@ -82,6 +85,7 @@ export const profiles: Profile[] = [
       websiteLabel: 'bestypop.com',
       websiteUrl: 'https://bestypop.com',
       email: 'hello@bestypop.com',
+      whatsapp: '919999999992',
     },
   },
   {
@@ -116,12 +120,14 @@ export const profiles: Profile[] = [
       websiteLabel: 'bestypop.com',
       websiteUrl: 'https://bestypop.com',
       email: 'hello@bestypop.com',
+      whatsapp: '919999999993',
     },
   },
   {
     slug: 'arun-menon',
     name: 'Arun Mukunda Menon',
     role: 'Head of Operations, BestyPop™',
+    location: 'Tiruppur, India',
     image: arunImage,
     bio: [
       {
@@ -150,6 +156,7 @@ export const profiles: Profile[] = [
       websiteLabel: 'bestypop.com',
       websiteUrl: 'https://bestypop.com',
       email: 'arun.menon@bestypop.com',
+      whatsapp: '919999999994',
     },
   },
 ]
