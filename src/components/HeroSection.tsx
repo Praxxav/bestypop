@@ -21,7 +21,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
           <img
             src={profile.image}
             alt={`${profile.name} profile portrait`}
-            className="size-full rounded-full object-cover"
+            className={`size-full rounded-full object-cover ${profile.imagePosition || 'object-center'}`}
             loading="eager"
             decoding="async"
           />

@@ -129,6 +129,7 @@ export const profiles: Profile[] = [
     role: 'Head of Operations, BestyPop™',
     location: 'Tiruppur, India',
     image: arunImage,
+    imagePosition: 'object-top',
     bio: [
       {
         icon: 'clipboard',

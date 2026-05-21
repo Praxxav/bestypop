@@ -40,6 +40,7 @@ export type Profile = {
   role: string
   location?: string
   image: string
+  imagePosition?: string
   bio: InfoItem[]
   meetings: Meeting[]
   socials: SocialLinks
