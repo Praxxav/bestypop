@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useParams } from 'react-router'
 import { MdCheckroom, MdFactory, MdInventory2, MdPeople } from 'react-icons/md'
-import {  FiGlobe, FiMail } from 'react-icons/fi'
+import {  FiGlobe, FiMail, FiExternalLink } from 'react-icons/fi'
 import { FaWhatsapp, FaHeart, FaInstagram, FaYoutube } from 'react-icons/fa'
 import { BookingCard } from '../components/BookingCard'
 import { HeroSection } from '../components/HeroSection'
@@ -78,7 +78,15 @@ export function ProfilePage() {
             <div className="flex flex-col items-center gap-1 rounded-lg bg-white/60 p-1.5 text-center backdrop-blur-sm">
               <MdCheckroom className="size-4 text-purple-600 sm:size-5" />
               <p className="text-[0.7rem] font-bold text-neutral-900 sm:text-[0.75rem]">30+</p>
-              <p className="text-[0.55rem] text-neutral-600 sm:text-[0.6rem]">Apparel Styles</p>
+              <a
+                href="https://links.dehcy.in/capability"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1 transition-colors hover:text-purple-600"
+              >
+                <span className="text-[0.55rem] text-neutral-600 sm:text-[0.6rem]">Apparel Styles</span>
+                <FiExternalLink className="size-2.5 sm:size-3 text-neutral-600 hover:text-purple-600" />
+              </a>
             </div>
             <div className="flex flex-col items-center gap-1 rounded-lg bg-white/60 p-1.5 text-center backdrop-blur-sm">
               <MdFactory className="size-4 text-purple-600 sm:size-5" />
