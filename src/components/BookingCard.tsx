@@ -11,7 +11,7 @@ type BookingCardProps = {
 export function BookingCard({ meeting, profileSlug }: BookingCardProps) {
   const Icon = iconMap[meeting.icon]
   const durationMinutes = meeting.duration.match(/\d+/)?.[0] || '15'
-  const bookingUrl = `https://cal.bestypopdemostore.com/${profileSlug}/${durationMinutes}min?overlayCalendar=true`
+  const bookingUrl = `https://cal.bestypop.com/${profileSlug}/${durationMinutes}min?overlayCalendar=true`
   const prefersReducedMotion = useReducedMotion()
 
   return (
