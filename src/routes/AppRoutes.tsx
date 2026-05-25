@@ -13,6 +13,7 @@ export function AppRoutes() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navigate to="/jineesh-mathew" replace />} />
+          <Route path="/connect" element={<ProfilePage slug="jineesh-mathew" />} />
           <Route path="/meet/arun-mukunda-menon" element={<Navigate to="/arun-menon" replace />} />
           <Route path="/meet/:slug" element={<LegacyMeetRedirect />} />
           <Route path="/arun-mukunda-menon" element={<Navigate to="/arun-menon" replace />} />

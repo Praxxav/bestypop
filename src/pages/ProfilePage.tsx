@@ -22,8 +22,13 @@ function upsertMetaDescription(content: string) {
   meta.content = content
 }
 
-export function ProfilePage() {
-  const { slug } = useParams()
+interface ProfilePageProps {
+  slug?: string
+}
+
+export function ProfilePage({ slug: propSlug }: ProfilePageProps = {}) {
+  const params = useParams()
+  const slug = propSlug || params.slug || 'jineesh-mathew'
   const profile = getProfileBySlug(slug)
 
   useEffect(() => {
